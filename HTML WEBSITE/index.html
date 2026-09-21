@@ -12,7 +12,7 @@
         <div>
             <h1>Digi-CoCo</h1>
             <p>
-                Report community problems easily and help make
+                Report community problems from <strong> New Lower Bicutan </strong> easily and help make
                 our neighborhood safer and better.
             </p>
             <a href="#complaint" class="btn">Submit a Complaint</a>
@@ -29,6 +29,9 @@
             <label for="name">Name</label>
             <input type="text" id="name" placeholder="Enter your name" required>
 
+            <label for="Contact">Contact Number</label>
+            <input type="tel" id="Contact" pattern="09 [0-9] {9}" placeholder="e.g 09XXXXXXXXX" maxlength="11"  required>
+            
             <label for="category">Complaint Category</label>
             <select id="category" required>
                 <option value="">Select Category</option>
@@ -39,6 +42,8 @@
 
             <label for="location">Location</label>
             <input type="text" id="location" placeholder="Where did it happen?" required>
+            <label for="Evidence">Evidence</label>
+            <input type="file" placeholder="Evidence ng kalokohan" required>
 
             <label for="description">Complaint Description</label>
             <textarea id="description" rows="5"

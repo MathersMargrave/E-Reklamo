@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Reklamo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f2f5f9;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: #ff0000;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #0a0a0a;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #050505;
+            margin-bottom: 40px;
+        }
+
+        .login-options {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .login-card {
+            width: 300px;
+            padding: 35px 25px;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            transition: 0.3s;
+    
+        }
+
+        .login-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .login-card h2 {
+            color: #334155;
+            margin-bottom: 10px;
+        }
+
+        .login-card p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .login-btn {
+            display: block;
+            text-decoration: none;
+            background: #2563eb;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .login-btn:hover {
+            background: #072177;
+        }
+
+        .worker .login-btn {
+            background: #2563eb;
+        }
+
+        .worker .login-btn:hover {
+            background: #072177;
+        }
+
+        footer {
+            margin-top: 35px;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .login-options {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .login-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">W</div>
+
+        <h1>Welcome to E-Reklamo</h1>
+
+        <p class="description">
+            Before you proceed, please select your role 
+        </p>
+
+        <div class="login-options">
+
+            <div class="login-card admin">
+                <div class="icon"></div>
+
+                <h2>Responder (Tanod)</h2>
+
+                <p>
+                    Login as a responder to manage complaints,
+                    view reports, and assist the community.
+                </p>
+
+                <a href="tanod.html" class="login-btn">
+                 Tanod Login
+                </a>
+            </div>
+
+            <!-- WORKER -->
+            <div class="login-card worker">
+                <div class="icon"></div>
+
+                <h2>Complainant</h2>
+
+                <p>
+                    Login as a complainant to submit complaints,
+                   and Ticket you concerns
+                </p>
+
+                <a href="complainant.html" class="login-btn">
+                    Proceed to Complaint Submission
+                </a>
+            </div>
+
+        </div>
+
+
+</body>
+</html>

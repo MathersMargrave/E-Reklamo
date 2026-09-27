@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanod Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f3f0f0;
+            color: #ff6e6e;
+        }
+
+         .html{
+            scroll-behavior: smooth;
+        
+         }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 230px;
+            height: 100vh;
+            background: #ff4747;
+            padding: 25px 15px;
+        }
+
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 14px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: #500b0b;
+            color: white;
+        }
+
+        .logout {
+            position: absolute;
+            bottom: 25px;
+            left: 15px;
+            right: 15px;
+        }
+
+        .main {
+            margin-left: 230px;
+            padding: 35px;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #64748b;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            color: #1e293b;
+        }
+
+        .section p {
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+        .task {
+            border: 1px solid #e2e8f0;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .task h3 {
+            color: #334155;
+            margin-bottom: 8px;
+        }
+
+        .task p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .pending {
+            display: inline-block;
+            margin-top: 10px;
+            background: #fef3c7;
+            color: #92400e;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+     
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            scroll-behavior: smooth;
+        }
+
+        .profile-picture {
+            width: 90px;
+            height: 90px;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+        }
+
+        .profile-info h3 {
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .profile-info p {
+            color: #64748b;
+            margin-bottom: 6px;
+        }
+
+     
+        @media (max-width: 700px) {
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .logout {
+                position: relative;
+                left: 0;
+                bottom: 0;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .profile {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <h2>Tanod Dashboard</h2>
+
+        <a href="#pending" class="active">
+             Pending Tickets
+        </a>
+
+        <a href="#profile">
+            My Profile
+        </a>
+
+        <a href="homepage.html" class="logout">
+            Logout
+        </a>
+
+    </div>
+
+    <div class="main">
+
+        <div class="header">
+            <h1>Responder Dashboard</h1>
+            
+        </div>
+
+        <div class="section" id="pending">
+
+            <h2>Pending Tickets</h2>
+
+            <div class="task">
+
+                <h3>Computer Maintenance</h3>
+
+                <p>
+                    Check and clean the office computers.
+                </p>
+
+                <p>
+                    📅 Due: September 28, 2026
+                </p>
+
+                <span class="pending">
+                    Pending
+                </span>
+
+            </div>
+
+
+            <div class="task">
+
+                <h3>Network Troubleshooting</h3>
+
+                <p>
+                    Fix the internet connection in Room 204.
+                </p>
+
+                <p>
+                    📅 Due: September 29, 2026
+                </p>
+
+                <span class="pending">
+                    Pending
+                </span>
+
+            </div>
+
+
+            <div class="task">
+
+                <h3>Inventory Check</h3>
+
+                <p>
+                    Check and record available computer equipment.
+                </p>
+
+                <p>
+                    📅 Due: October 1, 2026
+                </p>
+
+                <span class="pending">
+                    Pending
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="profile">
+
+            <h2>👤 My Profile</h2>
+
+            <div class="profile">
+
+                <div class="profile-picture">
+                    👷
+                </div>
+
+                <div class="profile-info">
+
+                    <h3>Juan Dela Cruz</h3>
+
+                    <p><strong>Worker ID:</strong> W-001</p>
+
+                    <p><strong>Position:</strong> IT Support Worker</p>
+
+                    <p><strong>Department:</strong> Information Technology</p>
+
+                    <p><strong>Email:</strong> juan@example.com</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
